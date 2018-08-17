@@ -1,0 +1,17 @@
+//Pagenation
+.page-navi{
+	margin:$space-large auto;
+	text-align: center;
+	.wp-pagenavi{
+		.pages{
+			padding: $space-normal;
+		}
+		.page,.current,.previouspostslink,.nextpostslink{
+			padding: $space-normal $space-normal * 1.5;
+			margin: 0 5px;
+		}
+		.page{
+			
+		}
+	}
+}

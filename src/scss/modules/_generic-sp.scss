@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+
+$cat_line_l : "-----------------------------------------------------";
+$cat_line_m : "----------------------------";
+$cat_line_s : "----------------------------";
+
+$breakPoint: 'screen and (max-width: 767px)';
+
+
+@media #{$breakPoint}{
+
+
+
+/* =============================================================
+ 画像サイズを可変にする
+============================================================= */
+
+img{
+    max-width: 100%;
+    height: auto;
+    width /***/:auto;
+}
+
+/* =============================================================
+ 汎用CSS
+============================================================= */
+
+
+
+/*フォントサイズ
+--------------------------------------------------------------*/
+
+.font_size_12_sp{
+    font-size:12px !important;
+}
+
+.font_size_14_sp{
+    font-size:14px !important;
+}
+
+.font_size_18_sp{
+    font-size:18px !important;
+}
+
+.font_size_24_sp{
+    font-size:24px !important;
+}
+
+.font_size_36_sp{
+    font-size:36px !important;
+}
+
+.font_size_48_sp{
+    font-size:48px !important;
+}
+
+
+
+
+
+/* 行揃え
+----------------------------------------------- */
+
+/*行揃え
+#{$cat_line_m}*/
+$arr : left, right, center;
+
+@each $i in $arr {
+    .align_#{$i}_sp {
+        text-align:#{$i};
+    }
+}
+
+
+
+/*表示
+--------------------------------------------------------------*/
+	
+$arr : inline, block, none, flex;
+@each $i in $arr {
+    .display_#{$i} {
+        display:#{$i};
+    }
+}
+
+
+
+/* Box
+--------------------------------------------------------------*/
+
+
+.width_160,.width_170,.width_200,.width_220,.width_230,.width_240,.width_250,.width_260,.width_270,.width_280,.width_300,.width_400,.width_420,.width_450,.width_460,.width_470,.width_500,.width_560,.width_600,.width_650,.width_680,.width_700,.width_720,.width_730_sp{
+    display:block;
+}
+
+
+/*width*/
+
+.width_auto_sp{
+    width:auto;
+}
+
+$i: 0;
+@while $i < 101 {
+    .width_#{$i}per_sp {
+        width:#{$i}#{'%'};
+        display:block;
+    }
+    $i: $i + 5;
+}
+
+$i: 0;
+@while $i < 1200 {
+    .width_#{$i}px {
+        width:#{$i}px;
+        display:block;
+    }
+    $i: $i + 10;
+}
+
+
+
+
+/*高さ*
+--------------------------------------------------------------*/
+
+.height_570_sp{
+    height:570px !important;
+
+}
+
+
+
+
+/*padding
+#{$cat_line_m}*/
+
+
+
+$i: 0;
+$prop_1 : "padding";
+$prop_2 : top, right,bottom, left;
+
+.#{$prop_1}_auto_sp {
+    #{$prop_1}:auto;
+}
+
+@each $prop in $prop_2 {
+    .#{$prop_1}_#{$prop}_auto_sp {
+        #{$prop_1}-#{$prop}:auto;
+    }
+}
+
+@while $i < 505 {
+    .#{$prop_1}_#{$i}px_sp {
+        #{$prop_1}:#{$i}px;
+    }
+
+    @each $prop in $prop_2 {
+        .#{$prop_1}_#{$prop}_#{$i}px_sp {
+            #{$prop_1}-#{$prop}:#{$i}px;
+        }
+    }
+    $i: $i + 5;
+}
+
+/*margin
+#{$cat_line_m}*/
+
+$i: 0;
+$prop_1 : "margin";
+.#{$prop_1}_auto_sp {
+    #{$prop_1}:auto;
+}
+
+@each $prop in $prop_2 {
+    .#{$prop_1}_#{$prop}_auto_sp {
+        #{$prop_1}-#{$prop}:auto;
+    }
+}
+
+@while $i < 505 {
+    .#{$prop_1}_#{$i}px_sp {
+        #{$prop_1}:#{$i}px;
+    }
+
+    @each $prop in $prop_2 {
+        .#{$prop_1}_#{$prop}_#{$i}px_sp {
+            #{$prop_1}-#{$prop}:#{$i}px;
+        }
+    }
+    $i: $i + 5;
+}
+
+
+
+/* Float
+#{$cat_line_m}*/
+$arr : left, right, none;
+
+@each $i in $arr {
+    .float_#{$i}_sp {
+        float:#{$i};
+    }
+}
+
+
+/*背景色
+--------------------------------------------------------------*/
+
+.bg_blue_sp{
+    background-color:#00AFE5 !important;
+}
+
+.bg_pink_sp{
+    background-color:#E85197 !important;
+}
+
+
+
+/*垂直の位置
+--------------------------------------------------------------*/
+
+.valign_center_sp{
+    vertical-align:middle !important !important;
+}
+
+
+/*ディスプレイ
+--------------------------------------------------------------*/
+.inline_sp{
+    display:inline !important;
+
+}
+
+.block_sp{
+    display:block !important;
+
+}
+
+/*ポジション
+--------------------------------------------------------------*/
+.absolute_sp{
+    position:absolute !important;
+}
+
+.relative_sp{
+    position:relative !important;
+}
+
+
+
+
+
+
+
+
+/*リスト要素
+--------------------------------------------------------------*/
+/*リストを横並びにする*/
+.list_float_none_sp li{
+    float:none !important;
+}
+
+/* Clearfix
+--------------------------------------------------------------*/
+
+.clearfix_sp:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+overflow:hidden;
+font-size:0em;
+line-height:0;
+}
+.clearfix_sp { 
+	display: inline-table;
+}
+
+}

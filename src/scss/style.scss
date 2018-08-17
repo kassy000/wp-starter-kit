@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/*
+Theme Name: Kawachi1920
+Theme URI: http://kawachi1920.com/
+Author: Digistry
+Author URI: http://digistry.jp/
+Description: Theme Description
+Version: 1.0.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
+Text Domain: text_domain
+Template:     ocin-lite
+Tags: right-sidebar, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+/*
+----------------------------------------------------------------
+TABLE OF CONTENTS
+----------------------------------------------------------------
+SCSS Variables and Mixins
+1. Reset
+2. Header
+3. Navigation
+4. Contents
+5. Sidebar
+6. Footer
+7. Comments
+8. Pagenation
+9. Admin
+10. CSS Frame Work
+----------------------------------------------------------------
+*/
+
+@import "modules/variables";
+
+/*
+==========================================
+1. Reset
+========================================== 
+*/
+
+@import "modules/reset";
+
+/*
+==========================================
+2. Header
+========================================== 
+*/
+
+@import "modules/header";
+
+/*
+==========================================
+4. Navigation
+========================================== 
+*/
+
+@import "modules/nav";
+
+/*
+==========================================
+5. Contents
+========================================== 
+*/
+
+/*
+Contents
+--------------------------------------------------------------------------
+*/
+@import "modules/contents";
+
+/*
+Top
+--------------------------------------------------------------------------
+*/
+@import "modules/top";
+
+/*
+Archive
+--------------------------------------------------------------------------
+*/
+@import "modules/archive";
+/*
+Single
+--------------------------------------------------------------------------
+*/
+@import "modules/single";
+/*
+Page
+--------------------------------------------------------------------------
+*/
+@import "modules/page";
+/*
+404
+--------------------------------------------------------------------------
+*/
+@import "modules/404";
+
+/*
+==========================================
+5. Sidebar
+========================================== 
+*/
+
+@import "modules/sidebar";
+
+/*
+==========================================
+5. Footer
+========================================== 
+*/
+
+@import "modules/footer";
+
+
+/*
+==========================================
+5. Comments
+========================================== 
+*/
+
+@import "modules/comments";
+
+/*
+==========================================
+5. Pagenation
+========================================== 
+*/
+
+@import "modules/pagenation";
+
+/*
+==========================================
+5. Admin
+========================================== 
+*/
+
+@import "modules/admin";
+
+/*
+==========================================
+5. CSS Frame Work
+========================================== 
+*/
+
+@import "modules/generic";
+@import "modules/generic-sp";
+

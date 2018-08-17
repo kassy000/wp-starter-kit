@@ -1,0 +1,53 @@
+//Footer
+footer{
+	clear: both;
+    width:$width-pc;
+    margin:$space-large auto;
+    border-top:$border;
+    padding-top:$space-normal;
+
+    @media #{$bp-pc}{
+        width:100%;
+    }
+
+    @media #{$bp-tab}{
+        width:$width-tab;
+    }
+
+
+    ul{
+        li{
+            float:right;
+            @media #{$bp-tab}{
+                float:none;
+                text-align:center;
+                margin:1em;
+            }
+            a{
+                padding:0px 10px;
+                border-right:$border;
+                @media #{$bp-tab}{
+                    border-right:none;
+                }
+            }
+
+            &:last-child{
+                a{
+                    border-left:$border;
+                    @media #{$bp-tab}{
+                        border-left:none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    p{
+        float:left;
+        @media #{$bp-tab}{
+            float:none;
+            text-align:center;
+        }
+    }
+}

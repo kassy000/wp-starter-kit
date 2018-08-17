@@ -1,0 +1,487 @@
+@charset "utf-8";
+/* CSS Document */
+
+$cat_line_l : "------------------------------------------------";
+$cat_line_m : "----------------------------";
+$cat_line_s : "-------------";
+
+$bp-tab: 'screen and (max-width: 767px)';
+$bp-sp: 'screen and (max-width: 767px)';
+/* =============================================================
+ 汎用CSS
+============================================================= */
+
+
+
+
+/*Font Size
+#{$cat_line_m}*/
+
+$arr : 9, 10, 12, 14, 18, 24, 32, 36, 48, 64;
+
+@each $i in $arr {
+    .font_size_#{$i}px {
+        font-size:#{$i}px;
+    }
+	
+	.font_size_#{$i}px_sp{
+    	font-size:#{$i}px !important;
+	}
+}
+
+/*Font Weight
+#{$cat_line_m}*/
+
+$arr : normal, bold, lighter, bolder, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@each $i in $arr {
+    .font_weight_#{$i} {
+        font-weight:#{$i};
+    }
+}
+
+/*Line-Height
+#{$cat_line_m}*/
+
+$i: 1;
+@while $i < 21 {
+    .line_height_#{$i}em {
+        line-height:#{$i / 10}em;
+    }
+    $i: $i + 1;
+}
+
+
+
+
+/*行揃え
+#{$cat_line_m}*/
+$arr : left, right, center;
+
+@each $i in $arr {
+    .align_#{$i} {
+        text-align:#{$i};
+    }
+}
+
+
+/*表示
+#{$cat_line_m}*/
+$arr : inline, block, none ,flex;
+
+@each $i in $arr {
+    .display_#{$i} {
+        display:#{$i};
+    }
+}
+
+
+/*Box
+#{$cat_line_m}*/
+
+
+/*width
+#{$cat_line_s}*/
+
+$list : ();
+.width_auto{
+    width:auto;
+}
+
+$i: 0;
+@while $i < 101 {
+    .width_#{$i}per {
+		width:#{$i}#{'%'};
+        display:block;
+    }
+
+    $list : append($list, #{$i});
+    $i: $i + 5;
+}
+
+
+
+
+$i: 0;
+@while $i < 1200 {
+    .width_#{$i}px {
+        width:#{$i}px;
+        display:block;
+    }
+    $i: $i + 10;
+}
+
+
+
+/*height
+#{$cat_line_s}*/
+.height_auto{
+    width:auto;
+}
+
+$i: 0;
+@while $i < 101 {
+    .height_#{$i}per {
+        height:#{$i}#{'%'};
+        display:block;
+    }
+    $i: $i + 5;
+}
+
+$i: 0;
+@while $i < 1200 {
+    .height_#{$i}px {
+        height:#{$i}px;
+        display:block;
+    }
+    $i: $i + 10;
+}
+
+
+
+
+
+@function makeProp_2($p_1, $p_2 , $val, $unit) {
+    @return ".#{$p_1}_#{$p_2}_#{$val}px {#{$prop_1}-#{$prop_2}:#{$val}px;}";
+}
+
+
+
+/*padding
+#{$cat_line_m}*/
+
+
+
+$i: 0;
+$prop_1 : "padding";
+$prop_2 : top, right,bottom, left;
+
+
+
+.#{$prop_1}_auto {
+    #{$prop_1}:auto;
+}
+
+@each $prop in $prop_2 {
+    .#{$prop_1}_#{$prop}_auto {
+        #{$prop_1}-#{$prop}:auto;
+    }
+}
+
+@while $i < 505 {
+    .#{$prop_1}_#{$i}px {
+        #{$prop_1}:#{$i}px;
+    }
+
+    @each $prop in $prop_2 {
+        .#{$prop_1}_#{$prop}_#{$i}px {
+            #{$prop_1}-#{$prop}:#{$i}px;
+        }
+    }
+    $i: $i + 5;
+}
+
+/*margin
+#{$cat_line_m}*/
+
+$i: 0;
+$prop_1 : "margin";
+.#{$prop_1}_auto {
+    #{$prop_1}:auto;
+}
+
+@each $prop in $prop_2 {
+    .#{$prop_1}_#{$prop}_auto {
+        #{$prop_1}-#{$prop}:auto;
+    }
+}
+
+@while $i < 505 {
+    .#{$prop_1}_#{$i}px {
+        #{$prop_1}:#{$i}px;
+    }
+
+    @each $prop in $prop_2 {
+        .#{$prop_1}_#{$prop}_#{$i}px {
+            #{$prop_1}-#{$prop}:#{$i}px;
+        }
+    }
+    $i: $i + 5;
+}
+
+
+
+
+
+
+/* Float
+#{$cat_line_m}*/
+$arr : left, right, none;
+
+@each $i in $arr {
+    .float_#{$i} {
+        float:#{$i};
+    }
+}
+
+
+/*リスト要素
+#{$cat_line_m}*/
+
+/*リストを横並びにする*/
+
+.list_style_none li{
+    list-style:none;
+    float:left;
+}
+
+.list_float_left li{
+    float:left;
+}
+
+/*リストの幅を指定*/
+.list_w_270 li{
+    width:270px;
+}
+
+/*リスト同士の余白を指定*/
+.list_margin_left_35{
+    margin-left:-35px;
+}
+
+.list_margin_left_35 li{
+    margin-left:35px;
+
+}
+
+.list_margin_bottom_20 li{
+    margin-bottom:20px;
+
+}
+
+
+/*透明
+#{$cat_line_m}*/
+
+$i: 0;
+@while $i < 101 {
+    .opacity_#{$i} {
+        opacity:#{$i};
+    }
+    $i: $i + 5;
+}
+
+
+/*ボーダー
+#{$cat_line_m}*/
+
+$i: 0;
+$prop_1 : "border";
+$prop_2 : top, right,bottom, left;
+$color : "#999";
+
+
+.#{$prop_1} {
+    #{$prop_1}:#{$color} solid 1px;
+}
+
+@each $prop in $prop_2 {
+    .#{$prop_1}_#{$prop} {
+        #{$prop_1}-#{$prop}:#{$color} solid 1px;
+    }
+}
+
+
+
+
+/* Clear
+#{$cat_line_m}*/
+
+.clear{
+    clear:both;
+}
+
+/* Clearfix
+#{$cat_line_m}*/
+
+
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+overflow:hidden;
+font-size:0em;
+line-height:0;
+}
+
+.clearfix { 
+	display: inline-table;
+	//display: inline-table; 
+}
+
+
+
+
+
+/*フォントカラー
+#{$cat_line_m}*/
+.font_black{
+    color:#000;
+}
+
+.font_white{
+    color:#FFF;
+}
+
+.font_blue{
+    color:#00AFE5;
+}
+
+.font_pink{
+    color:#E85197 !important
+}
+
+.font_group,.font_group a{
+    color:#003d8c;
+}
+
+.font_terugaoka,.font_terugaoka a{
+    color:#8ec31f;
+}
+
+.font_matsugahana, .font_matsugahana a{
+    color:#ed7785;
+}
+
+.font_senboku, .font_senboku a{
+    color:#f39800;
+}
+
+.font_kongo, .font_kongo a{
+    color:#52c3f1;
+}
+
+
+/*フォントウェイト
+#{$cat_line_m}*/
+.font_normal{
+    font-weight:normal;
+}
+
+.font_bold{
+    font-weight:bold;
+}
+
+/*line-height*/
+.font_line_height_1{
+    line-height:1em !important
+}
+
+.font_line_height_15{
+    line-height:1.5em !important
+}
+
+.font_line_height_2{
+    line-height:2em !important
+}
+
+
+/*字間
+#{$cat_line_m}*/
+.letter_spacing_-7{
+    letter-spacing:-0.7em;
+}
+
+.letter_spacing_0{
+    letter-spacing:0em;
+}
+
+.letter_spacing_1{
+    letter-spacing:0.1em;
+}
+
+.letter_spacing_2{
+    letter-spacing:0.2em;
+}
+
+.letter_spacing_5{
+    letter-spacing:0.5em
+}
+.letter_spacing_7{
+    letter-spacing:0.7em
+}
+
+
+
+
+/*背景色
+--------------------------------------------------------------*/
+.bg_white{
+    background-color:#FFF;
+}
+
+.bg_black{
+    background-color:#000;
+}
+
+
+.bg_blue{
+    background-color:#00AFE5;
+}
+
+.bg_pink{
+    background-color:#E85197;
+}
+
+
+/*垂直の位置
+--------------------------------------------------------------*/
+
+.valign_center{
+    vertical-align:middle !important;
+}
+
+
+
+
+/*ポジション
+--------------------------------------------------------------*/
+.absolute{
+    position:absolute;
+}
+
+.relative{
+    position:relative;
+}
+
+
+/*ポジション
+--------------------------------------------------------------*/
+
+.top_0{
+    top:0px;
+}
+
+$i: 0;
+@while $i < 1200 {
+    .top_#{$i}px {
+        top:#{$i}px;
+    }
+
+    .right_#{$i}px {
+        right:#{$i}px;
+    }
+
+    .bottom_#{$i}px {
+        bottom:#{$i}px;
+    }
+
+    .left_#{$i}px {
+        left:#{$i}px;
+    }
+    $i: $i + 5;
+}
+
+
