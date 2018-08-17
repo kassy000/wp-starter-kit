@@ -3,7 +3,7 @@
 <?php
     $main_class;
     if(is_home()):
-        $main_class = 'top';
+        $main_class = 'home';
     else:
         $main_class = get_post_format();
     endif;
