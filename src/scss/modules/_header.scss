@@ -1,11 +1,43 @@
-//Header
+
 header {
-	
-}
+  width: 200px;
+  .logo {
+    margin: 40px 0 0 40px;
+    a {
+      width: 108px;
 
-.admin-bar{
-	header {
-		
-	}
-}
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  nav {
+    margin: 40px 0 0 40px;
+    ul {
+      li {
+        width: 80px;
+        &.active{
+          img{
 
+            filter: saturate(1.0) brightness(1.0);
+          }
+        }
+        &.deactive{
+          opacity: 0.5;
+        }
+        a{
+          display: block;
+          height: 100%;
+        }
+        img {
+          width: 100%;
+          filter: saturate(1.0) brightness(0.0);
+        }
+
+
+
+      }
+    }
+  }
+}

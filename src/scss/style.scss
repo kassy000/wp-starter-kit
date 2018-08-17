@@ -1,17 +1,10 @@
 @charset "UTF-8";
 /*
-Theme Name: Kawachi1920
-Theme URI: http://kawachi1920.com/
-Author: Digistry
-Author URI: http://digistry.jp/
-Description: Theme Description
-Version: 1.0.0
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
-Text Domain: text_domain
-Template:     ocin-lite
-Tags: right-sidebar, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Theme Name: JAPAN BRAND POLICY
+Theme URI: https://japanbrandpolicy.com
+Text Domain: jbp
 */
+/*
 /*
 ----------------------------------------------------------------
 TABLE OF CONTENTS
@@ -50,7 +43,7 @@ SCSS Variables and Mixins
 
 /*
 ==========================================
-4. Navigation
+3. Navigation
 ========================================== 
 */
 
@@ -58,7 +51,7 @@ SCSS Variables and Mixins
 
 /*
 ==========================================
-5. Contents
+4. Contents
 ========================================== 
 */
 
@@ -105,7 +98,7 @@ Page
 
 /*
 ==========================================
-5. Footer
+6. Footer
 ========================================== 
 */
 
@@ -114,7 +107,7 @@ Page
 
 /*
 ==========================================
-5. Comments
+7. Comments
 ========================================== 
 */
 
@@ -122,7 +115,7 @@ Page
 
 /*
 ==========================================
-5. Pagenation
+8. Pagenation
 ========================================== 
 */
 
@@ -130,7 +123,7 @@ Page
 
 /*
 ==========================================
-5. Admin
+9. Admin
 ========================================== 
 */
 
@@ -138,10 +131,19 @@ Page
 
 /*
 ==========================================
-5. CSS Frame Work
+10. CSS Frame Work
 ========================================== 
 */
 
 @import "modules/generic";
 @import "modules/generic-sp";
+
+
+/*
+==========================================
+11. ThemeCSS
+==========================================
+*/
+
+
 

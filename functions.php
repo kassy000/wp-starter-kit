@@ -64,7 +64,7 @@ function text_domain_setup() {
 		'chat',
 	) );
 
-	
+
 	//This theme styles the visual editor to resemble the theme style,
 	//add_editor_style( array( $assets_dir . 'css/editor-style.css', text_domain_fonts_url() ) );
 
@@ -166,7 +166,7 @@ remove_filter( 'the_excerpt', 'wpautop' );
 function text_domain_get_field_params($prefix, $arg){
 	$arr = array();
 	foreach($arg as $field){
-		
+
 		$field_name = $prefix . $field['name'];
 		$options = array();
 		if(isset($field['type'])){
@@ -178,7 +178,7 @@ function text_domain_get_field_params($prefix, $arg){
 			}
 		}
 
-		
+
 		$shortcode = '[types field="' . $field_name .'"';
 		if(isset($field['type'])){
 			if($field['type'] == 'img'){
@@ -187,17 +187,17 @@ function text_domain_get_field_params($prefix, $arg){
 				$shortcode .= ' output=raw';
 			}
 		}
-		
+
 		if(isset($field['multiple'])){
 			if($field['multiple']){
 				$shortcode .= ' separator=","';
 				$shortcode .= ' output="html"';
 			}
 		}
-		
+
 		$shortcode .= '][/types]';
 		$param = do_shortcode($shortcode);
-		
+
 		if(isset($field['multiple'])){
 			if($field['multiple']){
 				$param = explode(',' , strip_tags($param));
@@ -211,3 +211,18 @@ function text_domain_get_field_params($prefix, $arg){
 }
 
 
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+    global $wp_version;
+    if ( $wp_version !== '4.7.1' ) {
+        return $data;
+    }
+
+    $filetype = wp_check_filetype( $filename, $mimes );
+
+    return [
+        'ext'             => $filetype['ext'],
+        'type'            => $filetype['type'],
+        'proper_filename' => $data['proper_filename']
+    ];
+
+}, 10, 4 );

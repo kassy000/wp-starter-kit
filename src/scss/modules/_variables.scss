@@ -1,21 +1,17 @@
-//Variables
-//BEM
-$bem_e : '--';
-$bem_m : '_';
 
+
+//Variables
 //Width
-$width-pc:960px;
-$width-tab : 92%;
 
 //Break point
 $bp-large: 'screen and (max-width: 1220px)';
-$bp-pc: 'screen and (max-width: 960px)';
+$bp-pc: 'screen and (max-width: 959px)';
 $bp-tab: 'screen and (max-width: 767px)';
 $bp-sp: 'screen and (max-width: 640px)';
 
 //Font
-$font-normal: 100% / 1.5;
-$font-large: 100% / 2;
+$font-normal: 100% / 1.5 #{'rem'};
+$font-large: 100% / 2 #{'rem'};
 
 //Color
 $color-white: #FFFFFF;
@@ -39,41 +35,55 @@ $space-small : 10px;
 $space-normal : 15px;
 $space-large : 30px;
 
-//heading
-@mixin heading-img-height{
-	font-size: 26px;
-	img{
-		height:26px;
-		width: auto;
-	}
-}
 
 //Border
 $border:1px solid #{$color-black};
 
 @mixin border-bottom {
-	border-bottom:$border;
+  border-bottom:$border;
 }
 
 //Button
 @mixin text-hide {
-    overflow:hidden;
-    text-indent:100%;
-    white-space:nowrap;
-    display:block;
+  overflow:hidden;
+  text-indent:100%;
+  white-space:nowrap;
+  display:block;
 }
 
 //Cleafix
 @mixin clearfix {
-    &:after{
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-        overflow:hidden;
-        font-size:0em;
-        line-height:0;
-    }
+  &:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow:hidden;
+    font-size:0em;
+    line-height:0;
+  }
+}
+
+
+@mixin contents_list($width){
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &::before{
+    content:"";
+    display: block;
+    width:$width;
+    order:1;
+  }
+  &::after{
+    content:"";
+    display: block;
+    width:$width;
+  }
+  li{
+    width:$width;
+    flex-basis: $width;
+  }
 }
 

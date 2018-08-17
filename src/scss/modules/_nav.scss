@@ -14,7 +14,7 @@ nav {
 		display: none;
 	}
 	ul {
-		width: $width-pc;
+		//width: $width-pc;
 		margin: 0 auto;
 		@media #{$bp-pc} {
 			margin-left: 50px;

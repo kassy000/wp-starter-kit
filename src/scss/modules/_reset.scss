@@ -1,9 +1,10 @@
 //Reset
 body{
-    //font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    //font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
-    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
-    font-weight: 500;
+    //ゴシック体
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    //明朝体
+    //font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-weight: 100;
 }
 
 a{
@@ -39,14 +40,15 @@ ul{
     li{
         list-style:none;
     }
-}
-
-@media #{$bp-pc} {
-    img {
+}img {
+	vertical-align: bottom;
+	@media #{$bp-pc} {
         width:100%;
         max-width: 100%;
         height: auto;
     }
 }
+
+
 
 

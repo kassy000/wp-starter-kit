@@ -13,7 +13,7 @@
 	<main class="<?php echo $main_class;?>">
 		<?php if ( have_posts() ) : ?>
 			<?php if(is_home()):?>
-				<?php get_template_part( 'content','top');?>
+				<?php get_template_part( 'content','home');?>
 			<?php else:?>
 				<?php while ( have_posts() ) : the_post();
 					get_template_part( 'content', get_post_format() );
